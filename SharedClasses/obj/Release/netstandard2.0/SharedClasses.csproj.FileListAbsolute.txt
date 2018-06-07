@@ -1,0 +1,8 @@
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\SharedClasses\bin\Release\netstandard2.0\SharedClasses.deps.json
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\SharedClasses\bin\Release\netstandard2.0\SharedClasses.dll
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\SharedClasses\bin\Release\netstandard2.0\SharedClasses.pdb
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\SharedClasses\obj\Release\netstandard2.0\SharedClasses.csproj.CoreCompileInputs.cache
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\SharedClasses\obj\Release\netstandard2.0\SharedClasses.AssemblyInfoInputs.cache
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\SharedClasses\obj\Release\netstandard2.0\SharedClasses.AssemblyInfo.cs
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\SharedClasses\obj\Release\netstandard2.0\SharedClasses.dll
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\SharedClasses\obj\Release\netstandard2.0\SharedClasses.pdb

@@ -1,7 +1,6 @@
 C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Debug\WindowsFormsAppRabbitMQClient.exe.config
 C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Debug\WindowsFormsAppRabbitMQClient.exe
 C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Debug\WindowsFormsAppRabbitMQClient.pdb
-C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Debug\Microsoft.Diagnostics.Tracing.EventSource.dll
 C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Debug\Newtonsoft.Json.dll
 C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Debug\RabbitMQ.Client.dll
 C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\obj\Debug\WindowsFormsAppRabbitMQClient.Client.resources

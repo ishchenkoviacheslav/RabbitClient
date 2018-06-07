@@ -15,13 +15,14 @@ using WindowsFormsAppRabbitMQClient.Serialize;
 using System.Threading;
 using SharedClasses.DTO;
 using SharedClasses.Serializator;
-
+using logger;
 namespace WindowsFormsAppRabbitMQClient
 {
     public partial class Client : Form
     {
+        private Logger logger = new Logger();
         private IConnection connection;
-        private IModel channel;
+        public IModel channel;
         private string replyQueueName;
         private EventingBasicConsumer consumer;
         private IBasicProperties props;
@@ -53,10 +54,14 @@ namespace WindowsFormsAppRabbitMQClient
                 Object obtained = ea.Body.Deserializer();
                 switch (obtained)
                 {
-                    //case ObjectCategory.Message:
-                    //    Message mess = ea.Body.Deserializer<Message>();
-                    //    Console.WriteLine(mess.UserName + ": " + mess.UserMessage);
-                    //    break;
+                    case Coordinate c:
+                        Graphics g;
+                        g = this.CreateGraphics();
+                        Rectangle rectangle = new Rectangle();
+                        PaintEventArgs arg = new PaintEventArgs(g, rectangle);
+                        Coordinate coord = new Coordinate(c.X, c.Y);
+                        DrawCircle(arg, coord, 10, 10);
+                        break;
                     case PingPeer p:
                         Ping();
                         return;
@@ -101,6 +106,7 @@ namespace WindowsFormsAppRabbitMQClient
             //IBasicProperties proper = channel.CreateBasicProperties();
             //proper.ReplyTo = replyQueueName;
             channel.BasicPublish(exchange: "", routingKey: "rpc_queue", basicProperties: props, body: ping.Serializer());
+            //channel.BasicPublish(exchange: "", routingKey: "rpc_queue", basicProperties: props, body: null);
         }
 
         private void OnlineStatus()
@@ -109,24 +115,35 @@ namespace WindowsFormsAppRabbitMQClient
             {
                 while (true)
                 {
-                    //change to offline
-                    if (DateTime.UtcNow.Subtract(LastUpDate) > new TimeSpan(0, 0, 5))
+                    try
                     {
-                        this.Invoke((Action)delegate
+                        //change to offline
+                        if (DateTime.UtcNow.Subtract(LastUpDate) > new TimeSpan(0, 0, 5))
                         {
-                            status.Text = "offline";
-                            status.ForeColor = Color.Red;
-                        });
-                        //try to ping if offline - may be was bad connection and this peer was deleted from peer-list on server(because peer was older than 5 sec)
-                        Ping();
+                            this.Invoke((Action)delegate
+                            {
+                                status.Text = "offline";
+                                status.ForeColor = Color.Red;
+                            });
+                            logger.Info("i am offline...");
+
+                            //try to ping if offline - may be was bad connection and this peer was deleted from peer-list on server(because peer was older than 5 sec)
+                            Ping();
+                        }
+                        else//change to online
+                        {
+                            this.Invoke((Action)delegate
+                            {
+                                status.Text = "online";
+                                status.ForeColor = Color.Green;
+                            });
+                            logger.Info("i am online...");
+                        }
+
                     }
-                    else//change to online
+                    catch (Exception)
                     {
-                        this.Invoke((Action)delegate
-                        {
-                            status.Text = "online";
-                            status.ForeColor = Color.Green;
-                        });
+                        logger.Error("Exception in online status cheking...");
                     }
                     Thread.Sleep(1000);
                 }
@@ -139,15 +156,47 @@ namespace WindowsFormsAppRabbitMQClient
             connection.Close();
         }
 
-        private void FirstPing_Click(object sender, EventArgs e)
-        {
-            //now its autoping if offline
-            //Ping();
-        }
-
         private void disconnect_Click(object sender, EventArgs e)
         {
             connection.Close();
         }
+
+        private void Client_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            //int x = e.X;
+            //int y = e.Y;
+            RandClick();
+
+        }
+        private void DrawCircle(PaintEventArgs e, Coordinate c, int width, int height)
+        {
+            Random r = new Random();
+            Pen pen = new Pen(Color.FromArgb(r.Next(0,255),r.Next(0,255),r.Next(0,255)), 3);
+            e.Graphics.DrawEllipse(pen, c.X - width / 2, c.Y - height / 2, width, height);
+            e.Dispose();
+        }
+
+        private void RandClick()
+        {
+            Task.Run(() =>
+            {
+                while (true)
+                {
+                    Graphics g;
+                    g = this.CreateGraphics();
+                    Rectangle rectangle = new Rectangle();
+                    PaintEventArgs arg = new PaintEventArgs(g, rectangle);
+                    Random r = new Random();
+                    int x = r.Next(10, 400);
+                    int y = r.Next(10, 400);
+                    Coordinate coord = new Coordinate(x, y);
+                    DrawCircle(arg, coord, 10, 10);
+                    channel.BasicPublish(exchange: "", routingKey: "rpc_queue", basicProperties: props, body: coord.Serializer());
+
+                    Thread.Sleep(100);
+                }
+            });
+        }
+
     }
 }

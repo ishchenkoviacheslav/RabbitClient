@@ -97,6 +97,7 @@
     <Compile Include="Client.Designer.cs">
       <DependentUpon>Client.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialize\JsonModel.cs" />
@@ -146,7 +147,7 @@
       <Version>11.0.2</Version>
     </PackageReference>
     <PackageReference Include="RabbitMQ.Client">
-      <Version>5.0.1</Version>
+      <Version>4.1.3</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,17 @@
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Release\WindowsFormsAppRabbitMQClient.exe.config
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Release\WindowsFormsAppRabbitMQClient.exe
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Release\WindowsFormsAppRabbitMQClient.pdb
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Release\Microsoft.Diagnostics.Tracing.EventSource.dll
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Release\Newtonsoft.Json.dll
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Release\RabbitMQ.Client.dll
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Release\SharedClasses.dll
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Release\System.dll
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\bin\Release\SharedClasses.pdb
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\obj\Release\WindowsFormsAppRabbitMQClient.csprojAssemblyReference.cache
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\obj\Release\WindowsFormsAppRabbitMQClient.Client.resources
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\obj\Release\WindowsFormsAppRabbitMQClient.Properties.Resources.resources
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\obj\Release\WindowsFormsAppRabbitMQClient.csproj.GenerateResource.cache
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\obj\Release\WindowsFormsAppRabbitMQClient.csproj.CoreCompileInputs.cache
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\obj\Release\WindowsFormsAppRabbitMQClient.csproj.CopyComplete
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\obj\Release\WindowsFormsAppRabbitMQClient.exe
+C:\Users\user\documents\visual studio 2017\Projects\WindowsFormsAppRabbitMQClient\WindowsFormsAppRabbitMQClient\obj\Release\WindowsFormsAppRabbitMQClient.pdb

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.status = new System.Windows.Forms.Label();
-            this.FirstPing = new System.Windows.Forms.Button();
             this.disconnect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -37,27 +36,17 @@
             // 
             this.status.AutoSize = true;
             this.status.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.status.Location = new System.Drawing.Point(140, 20);
+            this.status.Location = new System.Drawing.Point(7, 9);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(63, 25);
             this.status.TabIndex = 0;
             this.status.Text = "offline";
             // 
-            // FirstPing
-            // 
-            this.FirstPing.Location = new System.Drawing.Point(13, 105);
-            this.FirstPing.Name = "FirstPing";
-            this.FirstPing.Size = new System.Drawing.Size(153, 23);
-            this.FirstPing.TabIndex = 1;
-            this.FirstPing.Text = "FirstPing(disable)";
-            this.FirstPing.UseVisualStyleBackColor = true;
-            this.FirstPing.Click += new System.EventHandler(this.FirstPing_Click);
-            // 
             // disconnect
             // 
-            this.disconnect.Location = new System.Drawing.Point(216, 105);
+            this.disconnect.Location = new System.Drawing.Point(220, 13);
             this.disconnect.Name = "disconnect";
-            this.disconnect.Size = new System.Drawing.Size(75, 23);
+            this.disconnect.Size = new System.Drawing.Size(103, 21);
             this.disconnect.TabIndex = 2;
             this.disconnect.Text = "disconnect";
             this.disconnect.UseVisualStyleBackColor = true;
@@ -69,12 +58,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(378, 402);
             this.Controls.Add(this.disconnect);
-            this.Controls.Add(this.FirstPing);
             this.Controls.Add(this.status);
             this.Name = "Client";
             this.Text = "Client";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Client_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Client_MouseDoubleClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,7 +72,6 @@
         #endregion
 
         private System.Windows.Forms.Label status;
-        private System.Windows.Forms.Button FirstPing;
         private System.Windows.Forms.Button disconnect;
     }
 }
